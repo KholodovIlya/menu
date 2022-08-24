@@ -1,0 +1,85 @@
+@font-face {
+  font-family: KyivRegion;
+  src: url(KyivRegion.ttf);
+}
+
+* {
+  font-family: "KyivRegion";
+  margin: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 10px;
+}
+
+html { background-image: url(images/bg.png); }
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  border-radius: 5vh;
+  margin: auto;
+}
+
+.goods-out { display: flex; flex-wrap: wrap; justify-content: center; }
+.goods-out::after { content: ""; display: block; clear: both; }
+
+.slider {
+  max-width: 90vw;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .title {
+  position: absolute;
+  font-size: 3rem;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  color: red; -webkit-text-stroke: 2px black;
+}
+
+.slider-line {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+
+header button {
+  position: absolute;
+  background: transparent;
+  border: none !important;
+  width: 50%;
+  height: 100%;
+  top: 0;
+}
+
+.slider-prev { left: 0; }
+.slider-next { right: 0; }
+
+.cart {
+  margin: 10px auto;
+  border: 3px solid black;
+  border-radius: 20px;
+  float: left;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.cart img {
+  min-width: 100px;
+  border-radius: 5vh;
+  width: 20vw;
+}
+
+.cart .cost { font-size: 1.4rem; font-weight: bold; color: red; -webkit-text-stroke: 0.5px black; }
+
+.cart .name { font-size: 1rem; margin: 0; width: 20vw; word-wrap: break-word; }
